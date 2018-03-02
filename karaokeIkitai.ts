@@ -32,6 +32,6 @@ export class KaraokeIkitai {
    * @returns {boolean}
    */
   static isValid(tweetData: OdnTweetData): boolean {
-    return tweetData.text.match(/^(からおけ|カラオケ|ひとから|ヒトカラ)(いきたい|行きたい)$/gi) ? true : false;
+    return false === tweetData.isRetweet && tweetData.text.match(/^(からおけ|カラオケ|ひとから|ヒトカラ)(いきたい|行きたい)$/gi) ? true : false;
   }
 }
