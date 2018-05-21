@@ -15,6 +15,7 @@ export class KaraokeIkitai {
 
     const tweets = new OdnTweets(this.tweetData.accountData);
     tweets.text = "ぼくもからおけいきたい";
+    tweets.targetTweetId = this.tweetData.idStr;
 
     // ツイートを投稿
     tweets.postTweet((isSuccess) => {
